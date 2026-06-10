@@ -14,7 +14,6 @@ const teacher3: Teacher = {
   location: 'London',
   contract: false,
 };
-
 console.log(teacher3);
 
 interface Directors extends Teacher {
@@ -28,17 +27,15 @@ const director1: Directors = {
   fullTimeEmployee: true,
   numberOfReports: 17,
 };
-
 console.log(director1);
 
-nterface printTeacherFunction {
+interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
 const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
-  return ${firstName.charAt(0)}. ${lastName};
+  return `${firstName.charAt(0)}. ${lastName}`;
 };
-
 console.log(printTeacher('John', 'Doe'));
 
 interface StudentClassInterface {
@@ -54,7 +51,6 @@ interface StudentClassConstructor {
 
 class StudentClass implements StudentClassInterface {
   firstName: string;
-
   lastName: string;
 
   constructor(firstName: string, lastName: string) {
@@ -72,5 +68,4 @@ class StudentClass implements StudentClassInterface {
 }
 
 const studentClass: StudentClassConstructor = StudentClass;
-
 console.log(studentClass);
